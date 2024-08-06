@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CheckAnMOT.Test", "CheckAnM
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CheckAnMOT.Core", "CheckAnMOT.Core\CheckAnMOT.Core.csproj", "{BCD895BD-79FC-412E-AF1A-C3BE091180C8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CheckAnMOT.Web", "CheckAnMOT.Web\CheckAnMOT.Web.csproj", "{C79F0DE6-756A-464A-9A46-4D0C4684C66D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{BCD895BD-79FC-412E-AF1A-C3BE091180C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BCD895BD-79FC-412E-AF1A-C3BE091180C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BCD895BD-79FC-412E-AF1A-C3BE091180C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C79F0DE6-756A-464A-9A46-4D0C4684C66D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C79F0DE6-756A-464A-9A46-4D0C4684C66D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C79F0DE6-756A-464A-9A46-4D0C4684C66D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C79F0DE6-756A-464A-9A46-4D0C4684C66D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

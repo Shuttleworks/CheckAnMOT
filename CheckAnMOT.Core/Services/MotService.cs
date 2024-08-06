@@ -1,8 +1,10 @@
 ﻿
 using CheckAnMOT.Core.Models;
+using Microsoft.Extensions.Configuration;
 using System.Globalization;
 using System.Net;
 using System.Net.Http.Json;
+
 
 namespace CheckAnMOT.Core.Services
 {
@@ -12,9 +14,11 @@ namespace CheckAnMOT.Core.Services
         private readonly string _apiUrl;
         private readonly string _apiKey = "";
         private readonly string _endPoint = "?registration=";
+        private readonly IConfiguration _config;
 
-        public MotService(HttpClient httpClient) {
+        public MotService(HttpClient httpClient, IConfiguration config) {
             _httpClient = httpClient;
+            _config = config;   
             _apiUrl = GetAPIUrl();
             _apiKey = GetAPIKey();
         
@@ -22,13 +26,13 @@ namespace CheckAnMOT.Core.Services
 
         public string GetAPIUrl()
         {
-            string APIUrl = "https://beta.check-mot.service.gov.uk/trade/vehicles/mot-tests";
+            string APIUrl = _config.GetValue<string>("APIUrl") ?? "";
             return APIUrl;
         }
 
         public string GetAPIKey()
         {
-            string APIKey = "";
+            string APIKey = _config.GetValue<string>("APIKey") ?? "";
             return APIKey;
         }
 
