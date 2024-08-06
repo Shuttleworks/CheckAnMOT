@@ -1,10 +1,13 @@
 ﻿const inputElement = document.querySelector("#Registration");
 const buttonElement = document.querySelector("#btnSubmit");
 const formElement = document.querySelector("#frmMot");
+const reg = new RegExp(/[^a-zA-Z0-9\s]/);
 
 inputElement.addEventListener("input", (event) => {
 
-    if (event.target.value != "" && event.target.value.length <= 8) {
+    let invalid = reg.test(event.target.value);
+    
+    if (event.target.value != "" && event.target.value.length <= 8 && !invalid) {
         buttonElement.removeAttribute("disabled");
         buttonElement.classList.add("btn-success");
     } else {
@@ -15,7 +18,9 @@ inputElement.addEventListener("input", (event) => {
 });
 
 inputElement.addEventListener("click", (event) => {
-    if (event.target.value != "" && event.target.value.length <= 8) {
+    let invalid = reg.test(event.target.value);
+
+    if (event.target.value != "" && event.target.value.length <= 8 && !invalid) {
         event.target.value = "";
     }
 });

@@ -26,7 +26,6 @@ body {
     background-color: #ffd800;
     font-size: 3rem;
     max-width: 300px;
-   
-    text-center;
+    text-align:center;
     border-radius: 0.5rem;
 }

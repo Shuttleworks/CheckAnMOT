@@ -21,7 +21,7 @@
              {
                     <div class="d-flex justify-content-start">
                         <div class="px-2">
-                            <i class="fa-solid fa-circle-question"></i> <b>You are checking reg plate:</b>
+                            <i class="fa-solid fa-circle-question"></i> <b id="check-confirm">You are checking reg plate:</b>
                         </div>
                         <div>
                             @Model.Registration
@@ -55,7 +55,7 @@
                         <div class="px-2">
                             <i class="fa-solid fa-circle-info"></i> <b>MOT Expiry Date:</b>
                         </div>
-                        <div>
+                        <div id="check-expiry">
                             @(Model.MotExpiryDate > DateTime.MinValue ? Model.MotExpiryDate.ToShortDateString() : "No current MOT")
                         </div>
                     </div>
@@ -68,7 +68,7 @@
                 }
                 else
                 {
-                    <div class="alert alert-danger" role="alert">@Model.ErrorMessage</div>
+                    <div id="errormessage" class="alert alert-danger" role="alert">@Model.ErrorMessage</div>
                 }
             </div>
         } 

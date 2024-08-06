@@ -36,7 +36,7 @@ namespace CheckAnMOT.Web.Controllers
                     return View("Index", result);
                 } else
                 {
-                    ResultDTO resultDTO = new() { ErrorMessage = "Invalid numberplate entered" };
+                    ResultDTO resultDTO = new() { ErrorMessage = "Invalid numberplate entered!" };
                     return View("Index", resultDTO);
                 }
 
