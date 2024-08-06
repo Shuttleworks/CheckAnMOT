@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35013.160
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CheckAnMOT.Test", "CheckAnMOT.Test\CheckAnMOT.Test.csproj", "{BEA585C6-4225-4786-9C29-974E34039AD0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CheckAnMOT.Core", "CheckAnMOT.Core\CheckAnMOT.Core.csproj", "{BCD895BD-79FC-412E-AF1A-C3BE091180C8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BEA585C6-4225-4786-9C29-974E34039AD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BEA585C6-4225-4786-9C29-974E34039AD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BEA585C6-4225-4786-9C29-974E34039AD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BEA585C6-4225-4786-9C29-974E34039AD0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCD895BD-79FC-412E-AF1A-C3BE091180C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCD895BD-79FC-412E-AF1A-C3BE091180C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCD895BD-79FC-412E-AF1A-C3BE091180C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCD895BD-79FC-412E-AF1A-C3BE091180C8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A392338E-A5B0-412C-89FE-C2EBD3FE1C14}
+	EndGlobalSection
+EndGlobal
