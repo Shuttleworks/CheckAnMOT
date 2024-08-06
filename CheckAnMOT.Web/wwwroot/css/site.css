@@ -20,3 +20,13 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.regplate, .regplate:focus {
+    border: 3px solid black;
+    background-color: #ffd800;
+    font-size: 3rem;
+    max-width: 300px;
+   
+    text-center;
+    border-radius: 0.5rem;
+}

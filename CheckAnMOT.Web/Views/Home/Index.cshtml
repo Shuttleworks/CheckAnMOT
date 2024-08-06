@@ -5,12 +5,13 @@
 }
 
 <div class="container text-center">
-    <h3 class="mt-3">Enter a UK registered car number plate</h3>
-    
+    <h3 class="mt-5 mt-md-3">Enter a UK registered car number plate</h3>
+    <div class="d-flex justify-content-center">
     <form asp-action="CheckMot" asp-controller="Home" method="POST" data-ajax="true" data-ajax-update="result">
-        <input type="text" name="numberplate" asp-for="Registration"/>
-        <button id="btnSubmit" type="submit" >Check Now</button>
+        <input type="text" name="numberplate" class="form-control regplate" asp-for="Registration"/>
+        <button id="btnSubmit" type="submit" class="btn btn-secondary my-3">Check Now</button>
     </form>
+    </div>
     <div id="result">
 
         @if(Model != null)
@@ -18,37 +19,60 @@
             <div class="card p-3">
              @if(Model.StatusCode == System.Net.HttpStatusCode.OK)
              {
-                    <div>
-                    @Model.Registration    
+                    <div class="d-flex justify-content-start">
+                        <div class="px-2">
+                            <i class="fa-solid fa-circle-question"></i> <b>You are checking reg plate:</b>
+                        </div>
+                        <div>
+                            @Model.Registration
+                        </div>
                     </div>
-
-                    <div>
-                    @Model.Make
+                    <div class="d-flex justify-content-start">
+                        <div class="px-2">
+                            <i class="fa-solid fa-gear"></i> <b>Make:</b>
+                        </div>
+                        <div>
+                            @Model.Make
+                        </div>
                     </div>
-
-                    <div>
-                    @Model.Model
+                    <div class="d-flex justify-content-start">
+                        <div class="px-2">
+                            <i class="fa-solid fa-car"></i> <b>Model:</b>
+                        </div>
+                        <div>
+                            @Model.Model
+                        </div>
                     </div>
-
-                    <div>
-                    @Model.Colour
+                    <div class="d-flex justify-content-start">
+                        <div class="px-2">
+                            <i class="fa-solid fa-palette"></i> <b>Colour:</b>
+                        </div>
+                        <div>
+                            @Model.Colour
+                        </div>
                     </div>
-
-                    <div>
-                    @(Model.MotExpiryDate > DateTime.MinValue ? Model.MotExpiryDate.ToShortDateString() : "No current MOT")
+                    <div class="d-flex justify-content-start">
+                        <div class="px-2">
+                            <i class="fa-solid fa-circle-info"></i> <b>MOT Expiry Date:</b>
+                        </div>
+                        <div>
+                            @(Model.MotExpiryDate > DateTime.MinValue ? Model.MotExpiryDate.ToShortDateString() : "No current MOT")
+                        </div>
                     </div>
-
-                    <div>
-                    @Model.NumFailedMots
+                    <div class="d-flex justify-content-start">
+                        <div class="px-2 d-flex align-items-start text-start">
+                            <i class="fa-solid fa-triangle-exclamation pt-1 pe-1"></i> <b>Number of MOT failures in vehicle history:</b>
+                        </div>
+                        <div class="text-start">@Model.NumFailedMots</div>
                     </div>
                 }
                 else
                 {
-                    <div>@Model.ErrorMessage</div>
+                    <div class="alert alert-danger" role="alert">@Model.ErrorMessage</div>
                 }
             </div>
         } 
 
     </div>
-
+    
 </div>
