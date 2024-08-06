@@ -9,7 +9,7 @@
     <div class="d-flex justify-content-center">
     <form asp-action="CheckMot" asp-controller="Home" method="POST" data-ajax="true" data-ajax-update="result">
         <input type="text" name="numberplate" class="form-control regplate" asp-for="Registration"/>
-        <button id="btnSubmit" type="submit" class="btn btn-secondary my-3">Check Now</button>
+        <button id="btnSubmit" type="submit" class="btn btn-secondary my-3" disabled>Check Now</button>
     </form>
     </div>
     <div id="result">

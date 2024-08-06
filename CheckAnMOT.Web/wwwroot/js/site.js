@@ -1,4 +1,23 @@
-﻿// Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
+﻿const inputElement = document.querySelector("#Registration");
+const buttonElement = document.querySelector("#btnSubmit");
+const formElement = document.querySelector("#frmMot");
 
-// Write your JavaScript code.
+inputElement.addEventListener("input", (event) => {
+
+    if (event.target.value != "" && event.target.value.length <= 8) {
+        buttonElement.removeAttribute("disabled");
+        buttonElement.classList.add("btn-success");
+    } else {
+        buttonElement.setAttribute("disabled", "");
+        buttonElement.classList.remove("btn-success");
+    }
+
+});
+
+inputElement.addEventListener("click", (event) => {
+    if (event.target.value != "" && event.target.value.length <= 8) {
+        event.target.value = "";
+    }
+});
+
+
