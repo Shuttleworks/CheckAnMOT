@@ -6,3 +6,5 @@ Please add a valid API Key to the appsettings.json to authenticate with the API
 
 Selenium Tests included.
 
+C#, .net 8
+
