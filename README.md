@@ -2,9 +2,9 @@
 
 A simple .Net Core web app to check a UK registered car's MOT information using the DVLA's API.
 
-Please add a valid API Key to the appsettings.json to authenticate with the API
+Add a valid API Key to the appsettings.json to authenticate with the API
 
-Selenium Tests included.
+C#, .net 8, Selenium
 
-C#, .net 8
+![Screenshot](screenshot.png)
 
